@@ -55,7 +55,7 @@ sudo apt install python3 python3-pip git -y
 
 2️⃣ Clone Repository
 
-git clone https://github.com/<your-username>/Aayush-Discord-AI-Bot.git
+git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
 cd Aayush-Discord-AI-Bot
 
 
