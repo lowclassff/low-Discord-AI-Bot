@@ -34,21 +34,21 @@ Check if Python is installed:
 ```bash
 python3 --version
 🖥️ Windows
-Download from Python.org
+Download from Python.org```
 
 During installation, check “Add to PATH”
 
 📱 Termux (Android)
 bash
 Copy code
-pkg update -y && pkg upgrade -y
+```pkg update -y && pkg upgrade -y
 pkg install python -y
-pkg install git -y
+pkg install git -y```
 🐧 Linux (Debian/Ubuntu)
 bash
 Copy code
-sudo apt update
-sudo apt install python3.11 python3.11-venv python3.11-distutils -y
+```sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-distutils -y```
 👉 If you need Python upgrade (for Google GenAI support):
 
 bash
@@ -57,19 +57,22 @@ sudo apt install python3.11 python3.11-venv python3.11-distutils -y
 📌 2. Clone Repository
 bash
 Copy code
-git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
-cd Aayush-Discord-AI-Bot
+```git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
+cd Aayush-Discord-AI-Bot```
 📌 3. Install Requirements
 Upgrade pip (important!):
 
 bash
 Copy code
-pip install --upgrade pip setuptools wheel
+```pip install --upgrade pip setuptools wheel```
 Install dependencies:
 
 bash
 Copy code
-pip install -r requirements.txt
+
+```python -m pip install --upgrade pip```
+
+```pip install -r requirements.txt```
 📌 4. Create a Discord Bot
 Go to Discord Developer Portal
 
@@ -98,11 +101,11 @@ Get your OpenAI API key from platform.openai.com/api-keys.
 Linux / macOS / Termux
 bash
 Copy code
-export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"
+```export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"```
 Windows PowerShell
 powershell
 Copy code
-setx OPENAI_API_KEY "sk-XXXXXXXXXXXXXXXX"
+```setx OPENAI_API_KEY "sk-XXXXXXXXXXXXXXXX"```
 Render (Hosting)
 Environment Variables → Add:
 
@@ -116,7 +119,7 @@ Right-click channel → Copy Channel ID
 📌 8. Run the Bot
 bash
 Copy code
-python bot.py
+```python bot.py```
 Enter when prompted:
 
 Your Discord Bot Token
