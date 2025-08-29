@@ -47,8 +47,8 @@ pkg install git -y
 🐧 Linux (Debian/Ubuntu)
 bash
 Copy code
-sudo apt update && sudo apt upgrade -y
-sudo apt install python3 python3-pip git -y
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-distutils -y
 👉 If you need Python upgrade (for Google GenAI support):
 
 bash
