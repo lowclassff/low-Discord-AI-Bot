@@ -72,7 +72,14 @@ Copy code
 
 python -m pip install --upgrade pip
 
+python3.11 --version
+python3.11 -m venv venv
+source venv/bin/activate
+python --version  # should now show 3.11 inside the venv
+pip install --upgrade pip
+
 pip install -r requirements.txt
+
 📌 4. Create a Discord Bot
 Go to Discord Developer Portal
 
