@@ -106,6 +106,11 @@ Copy the URL → Open in browser → Invite bot to your server
 Get your OpenAI API key from platform.openai.com/api-keys.
 
 Linux / macOS / Termux
+
+https://platform.openai.com/docs/overview
+
+https://platform.openai.com/api-keys
+
 bash
 Copy code
 export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"
