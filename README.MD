@@ -27,181 +27,172 @@ Aayush-Discord-AI-Bot/ │── bot.py │── cogs/ │
 
 ---
 
-## Setup Instructions (Long Version)
+## 📌 1. Install Python
 
-### 1️⃣ Install Python
+Check if Python is installed:
+
 ```bash
 python3 --version
+🖥️ Windows
+Download from Python.org
 
-If not installed:
+During installation, check “Add to PATH”
 
-Windows → Download from Python.org and check “Add to PATH”
-
-Linux / Termux:
-
+📱 Termux (Android)
+bash
+Copy code
 pkg update -y && pkg upgrade -y
 pkg install python -y
 pkg install git -y
-
-Ubuntu/Debian:
-
+🐧 Linux (Debian/Ubuntu)
+bash
+Copy code
 sudo apt update && sudo apt upgrade -y
 sudo apt install python3 python3-pip git -y
+👉 If you need Python upgrade (for Google GenAI support):
 
-
-
-
----
-
-2️⃣ Clone Repository
-
+bash
+Copy code
+sudo apt install python3.11 python3.11-venv python3.11-distutils -y
+📌 2. Clone Repository
+bash
+Copy code
 git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
 cd Aayush-Discord-AI-Bot
+📌 3. Install Requirements
+Upgrade pip (important!):
 
+bash
+Copy code
+pip install --upgrade pip setuptools wheel
+Install dependencies:
 
----
-
-3️⃣ Install Requirements
-
+bash
+Copy code
 pip install -r requirements.txt
+📌 4. Create a Discord Bot
+Go to Discord Developer Portal
 
+Create New Application → Add Bot
 
----
+Enable Message Content Intent
 
-4️⃣ Create a Discord Bot
+Copy the Bot Token
 
-1. Go to Discord Developer Portal
+📌 5. Invite Bot to Your Server
+In Developer Portal → OAuth2 → URL Generator
 
+Select Bot and permissions:
 
-2. Create New Application → Add Bot
+✅ Read Messages
 
+✅ Send Messages
 
-3. Enable Message Content Intent
+✅ Use Slash Commands
 
+Copy the URL → Open in browser → Invite bot to your server
 
-4. Copy the Bot Token
+📌 6. Set Your API Key
+Get your OpenAI API key from platform.openai.com/api-keys.
 
-
-
-
----
-
-5️⃣ Invite Bot to Your Server
-
-1. In Developer Portal → OAuth2 → URL Generator
-
-
-2. Select Bot → Give permissions:
-
-Read Messages
-
-Send Messages
-
-Use Slash Commands
-
-
-
-3. Copy the URL → Open in browser → Invite bot to your server
-
-
-
-
----
-
-6️⃣ Set Your AI API Key
-
-Linux / Termux / macOS
-
-https://platform.openai.com/api-keys
-
+Linux / macOS / Termux
+bash
+Copy code
 export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"
-
 Windows PowerShell
-
+powershell
+Copy code
 setx OPENAI_API_KEY "sk-XXXXXXXXXXXXXXXX"
-
-Render (Environment Variables → Add New)
+Render (Hosting)
+Environment Variables → Add:
 
 OPENAI_API_KEY = sk-XXXXXXXXXXXXXXXX
 
+📌 7. Get Discord Channel ID
+Discord → Settings → Advanced → Enable Developer Mode
 
----
+Right-click channel → Copy Channel ID
 
-7️⃣ Get Discord Channel ID
-
-1. Open Discord → Settings → Advanced → Enable Developer Mode
-
-
-2. Right-click the channel where bot should reply → Copy Channel ID
-
-
-
-
----
-
-8️⃣ Run the Bot
-
+📌 8. Run the Bot
+bash
+Copy code
 python bot.py
-
-➡️ Enter:
+Enter when prompted:
 
 Your Discord Bot Token
 
 Your Channel ID
 
-
-
----
-
-9️⃣ Keep Bot Running 24/7 (Linux / Termux VPS)
-
+📌 9. Keep Bot Running 24/7 (Linux / VPS / Termux)
 Option A: tmux
-
+bash
+Copy code
 tmux new -s aayushbot
 python bot.py
+Detach: CTRL + B then D
 
-Detach: CTRL+B then D
-
-Reattach:
-
-
-tmux attach -t aayushbot
+Reattach: tmux attach -t aayushbot
 
 Option B: screen
-
+bash
+Copy code
 screen -S aayushbot
 python bot.py
+Detach: CTRL + A then D
 
-Detach: CTRL+A then D
+Reattach: screen -r aayushbot
 
-Reattach:
-
-
-screen -r aayushbot
-
-
----
-
-🔟 Deploy on Render (Free Hosting)
-
+📌 🔟 Deploy on Render (Free Hosting)
 Build Command
 
+bash
+Copy code
 pip install -r requirements.txt
-
 Start Command
 
+bash
+Copy code
 python bot.py
+Environment Variables
 
-Environment Variables on Render
-
+ini
+Copy code
 OPENAI_API_KEY = sk-XXXXXXXXXXXXXXXX
 CHANNEL_ID = 123456789012345678
-
-
----
-
-1️⃣1️⃣ Update Bot
-
+📌 1️⃣1️⃣ Update Bot
+bash
+Copy code
 git pull origin main
-pip install -r requirements.txt
+pip install -r requirements.txt --upgrade
 python bot.py
+🛠️ Useful Commands & Tips
+Upgrade pip
+
+bash
+Copy code
+pip install --upgrade pip
+Upgrade all packages
+
+bash
+Copy code
+pip list --outdated
+pip install -U $(pip list --outdated | awk 'NR>2 {print $1}')
+Upgrade Python on Debian/Ubuntu
+
+bash
+Copy code
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-distutils -y
+Run inside virtual environment (recommended)
+
+bash
+Copy code
+python3.11 -m venv venv
+source venv/bin/activate
+Deactivate venv:
+
+bash
+Copy code
+deactivate
+✅ Done!
+Your bot should now be online 🎉
