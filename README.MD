@@ -112,6 +112,8 @@ Use Slash Commands
 
 Linux / Termux / macOS
 
+https://platform.openai.com/api-keys
+
 export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"
 
 Windows PowerShell
