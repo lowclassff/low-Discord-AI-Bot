@@ -4,13 +4,11 @@ import asyncio
 import discord
 from discord.ext import commands
 
-BANNER = r"""
- █████╗  █████╗ ██╗   ██╗██╗   ██╗███████╗██╗  ██╗
-██╔══██╗██╔══██╗██║   ██║╚██╗ ██╔╝██╔════╝██║  ██║
-███████║██║  ╚═╝██║   ██║ ╚████╔╝ █████╗  ███████║
-██╔══██║██║  ██╗██║   ██║  ╚██╔╝  ██╔══╝  ██╔══██║
-██║  ██║╚█████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
-╚═╝  ╚═╝ ╚════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+# Banner box
+banner = r"""
++-------------------+
+|   Made by AAYUSH  |
++-------------------+
 """
 
 def ask(prompt):
@@ -18,11 +16,14 @@ def ask(prompt):
     return sys.stdin.readline().strip()
 
 async def main():
-    print(BANNER)
+    # Print the banner
+    print(banner)
+
     token = ask("Enter your Discord Bot Token: ")
     if not token:
         print("No token provided. Exiting.")
         return
+
     channel_id = ask("Enter the Channel ID where the bot should reply: ")
     if not channel_id.isdigit():
         print("Invalid CHANNEL_ID. Must be numeric.")
@@ -38,6 +39,7 @@ async def main():
     async def on_ready():
         print(f"✅ Logged in as {bot.user} | Responding only in channel {channel_id}")
 
+    # Load your AI chat cog
     await bot.load_extension("cogs.ai_chat")
     await bot.start(token)
 
