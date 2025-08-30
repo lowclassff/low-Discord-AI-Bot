@@ -31,8 +31,10 @@ Aayush-Discord-AI-Bot/ │── bot.py │── cogs/ │
 
 Check if Python is installed:
 
-```bash
-python3 --version
+bash
+
+```python3 --version```
+
 🖥️ Windows
 Download from Python.org
 
