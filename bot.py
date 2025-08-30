@@ -7,7 +7,7 @@ from discord.ext import commands
 # Banner box
 banner = r"""
 +-------------------+
-|   Made by AAYUSH  |
+|   Made by LOWCLAS |
 +-------------------+
 """
 
