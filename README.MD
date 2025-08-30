@@ -44,16 +44,19 @@ During installation, check “Add to PATH”
 bash
 Copy code
 
-```pkg update -y && pkg upgrade -y
-pkg install python -y
-pkg install git -y```
+```pkg update -y && pkg upgrade -y```
+
+```pkg install python -y```
+
+```pkg install git -y```
 
 🐧 Linux (Debian/Ubuntu)
 bash
 Copy code
 
-```sudo apt update
-sudo apt install python3.11 python3.11-venv python3.11-distutils -y```
+```sudo apt update```
+
+```sudo apt install python3.11 python3.11-venv python3.11-distutils -y```
 
 👉 If you need Python upgrade (for Google GenAI support):
 
@@ -66,8 +69,9 @@ Copy code
 bash
 Copy code
 
-```git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
-cd Aayush-Discord-AI-Bot```
+```git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot```
+
+```cd Aayush-Discord-AI-Bot```
 
 📌 3. Install Requirements
 Upgrade pip (important!):
@@ -84,11 +88,11 @@ Copy code
 
 ```python -m pip install --upgrade pip```
 
-```python3.11 --version
+python3.11 --version
 python3.11 -m venv venv
 source venv/bin/activate
 python --version  # should now show 3.11 inside the venv
-pip install --upgrade pip```
+pip install --upgrade pip
 
 ```pip install -r requirements.txt```
 
