@@ -43,44 +43,54 @@ During installation, check “Add to PATH”
 📱 Termux (Android)
 bash
 Copy code
-pkg update -y && pkg upgrade -y
+
+```pkg update -y && pkg upgrade -y
 pkg install python -y
-pkg install git -y
+pkg install git -y```
+
 🐧 Linux (Debian/Ubuntu)
 bash
 Copy code
-sudo apt update
-sudo apt install python3.11 python3.11-venv python3.11-distutils -y
+
+```sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-distutils -y```
+
 👉 If you need Python upgrade (for Google GenAI support):
 
 bash
 Copy code
-sudo apt install python3.11 python3.11-venv python3.11-distutils -y
+
+```sudo apt install python3.11 python3.11-venv python3.11-distutils -y```
+
 📌 2. Clone Repository
 bash
 Copy code
-git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
-cd Aayush-Discord-AI-Bot
+
+```git clone https://github.com/HandsomeBhai/Aayush-Discord-AI-Bot
+cd Aayush-Discord-AI-Bot```
+
 📌 3. Install Requirements
 Upgrade pip (important!):
 
 bash
 Copy code
-pip install --upgrade pip setuptools wheel
+
+```pip install --upgrade pip setuptools wheel```
+
 Install dependencies:
 
 bash
 Copy code
 
-python -m pip install --upgrade pip
+```python -m pip install --upgrade pip```
 
-python3.11 --version
+```python3.11 --version
 python3.11 -m venv venv
 source venv/bin/activate
 python --version  # should now show 3.11 inside the venv
-pip install --upgrade pip
+pip install --upgrade pip```
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 📌 4. Create a Discord Bot
 Go to Discord Developer Portal
@@ -109,21 +119,23 @@ Get your OpenAI API key from platform.openai.com/api-keys.
 
 Linux / macOS / Termux
 
-https://platform.openai.com/docs/overview
-
-https://platform.openai.com/api-keys
+```https://platform.openai.com/api-keys```
 
 bash
 Copy code
-export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"
+
+```export OPENAI_API_KEY="sk-XXXXXXXXXXXXXXXX"```
+
 Windows PowerShell
 powershell
 Copy code
-setx OPENAI_API_KEY "sk-XXXXXXXXXXXXXXXX"
+
+```setx OPENAI_API_KEY "sk-XXXXXXXXXXXXXXXX"```
+
 Render (Hosting)
 Environment Variables → Add:
 
-OPENAI_API_KEY = sk-XXXXXXXXXXXXXXXX
+```OPENAI_API_KEY = sk-XXXXXXXXXXXXXXXX```
 
 📌 7. Get Discord Channel ID
 Discord → Settings → Advanced → Enable Developer Mode
@@ -133,7 +145,8 @@ Right-click channel → Copy Channel ID
 📌 8. Run the Bot
 bash
 Copy code
-python bot.py
+
+```python bot.py```
 Enter when prompted:
 
 Your Discord Bot Token
